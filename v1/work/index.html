@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Pragma" contect="no-cache">
+    <title>唯品会</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="diyUpload/css/webuploader.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="sys/hookcut.css" >
+</head>
+<body ng-controller="ctrl1">
+    <div class="header f-clrfix">
+        <a href="/" class="m-logo f-fl"></a>
+    </div>
+
+    <div class="container-fluid f-clrfix">
+        <div class="row">
+            <div class="left-side col-md-2" style="text-align:center;">
+                <h2>操作指引</h2>
+                <ol>
+                    <li>
+                        <p>
+                            1. 右侧应用名称输入框最终体现在浏览器tab页面的标题中。<br/>
+                            <img src="images/title.png">
+                        </p>
+                    </li>
+                    <li>
+                        <p>2. 点击主工作区的注册领取按钮，可以修改弹出框的样式，在右侧面板可以找到四个红色的弹出框按钮，<br/>
+                            <img src="images/pop.png">
+                        点击对应按钮，会在中部主工作区展示对应的弹出框，用户可以修改弹出框中相应的文案。点选右侧不同的红色弹出框按钮可以切换不同的弹出框，如果要关闭弹出框，请点击对应弹出框右上角的关闭图标。<img src="images/close.png">
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            3. 点击中部的活动规则区域，可以修改活动规则相关的内容，请注意活动规则各条款之间需要换行。
+                            <img src="images/return.png">
+                        </p>
+                    </li>
+                </ol>
+            </div>
+            <div class="worktai col-md-7">
+                <div class="wrapper">
+                    <!-- banner位 -->
+                    <div class="banner">
+                        <img src="resources/images/img_01.jpg" alt="" />
+                        <img src="resources/images/img_02.jpg" alt="" />
+                    </div>
+                    <!-- 优惠券。如果已经领取，变类“on”为“off” -->
+                    <div class="coupon on">
+                        <img src="resources/images/img_03.jpg" alt="">
+                    </div>
+                    <!-- 领取按钮 -->
+                    <div class="btn-cnt">
+                        <img src="resources/images/img_04.jpg" alt="">
+                        <!-- 若不可点,加类"btn-disabled" -->
+                        <a class="btn" href="javascript:void(0);">注册领取</a>
+                    </div>
+                    <img src="resources/images/img_05.jpg" alt=""/>
+                    <!-- 活动规则 -->
+                    <div class="rule on">
+                        <div class="title">活动规则</div>
+                        <ul class="cnt">
+                            <li>1、活动期间，成功注册的用户均可领取唯品会优惠券，每个用户仅限领用一次；</li>
+                            <li>2、20元优惠券满200元可用，仅限手机使用，有效期为2015年3月17日―2015年4月16日；</li>
+                            <li>3、此活动暂不支持特卖会品牌直发专场、唯品团；</li>
+                            <li>4、如商品发货后，会员取消订单，拒收，退货，需要扣除10元运费再退回对应货款；</li>
+                            <li>5、若因系统故障或其他不可抗力，造成活动未能按时进行，唯品会有权调整活动时间或取消活动；</li>
+                            <li>6、任何经唯品会认定存在作弊、批量注册等不正当行为的用户，唯品会有权取消该用户抽奖及参与本活动的资格；</li>
+                            <li>7、唯品会在法律法规允许范围可对本活动进行解释。</li>
+                        </ul>
+                    </div>
+                    <img class="block" src="resources/images/img_07.jpg" alt="" />
+                </div>
+                <!-- 弹窗 -->
+                <div class="pop">
+                    <div class="pop-con pop-con-1">
+                        <!-- 头部 -->
+                        <div class="title">
+                            <a href="javascript:;" class="close"></a>
+                        </div>
+                        <!-- 内容区 -->
+                        <div class="cnt">
+                            <p>
+                                <img class="success-icon" src="resources/images/ico.png" alt="" />
+                                <em class="success-text">领券成功!</em>
+                            </p>
+                            <p>
+                                <span class="nocss">恭喜您已获得</span>
+                                <em class="coupon-num">60元优惠券</em>
+                            </p>
+                        </div>
+                        <!-- 脚部 -->
+                        <div class="footer">
+                            <!-- 不可点击加类“disabled” -->
+                            <a href="javascript:;" class="btn">去首页购物</a>
+                            <a href="javascript:;" class="btn">进入个人中心查看</a>
+                        </div>
+                    </div>
+                    <div class="pop-con pop-con-2">
+                        <!-- 头部 -->
+                        <div class="title">
+                            <a href="javascript:;" class="close"></a>
+                        </div>
+                        <!-- 内容区 -->
+                        <div class="cnt">
+                            <p>
+                                <em class="success-text">人潮涌涌,稍等片刻</em>
+                            </p>
+                            <p>优惠券将稍后返至您账户!</p>
+                        </div>
+                        <!-- 脚部 -->
+                        <div class="footer">
+                            <!-- 不可点击加类“disabled” -->
+                            <a href="javascript:;" class="btn">去首页购物</a>
+                        </div>
+                    </div>
+                    <div class="pop-con pop-con-3">
+                        <!-- 头部 -->
+                        <div class="title">
+                            <a href="javascript:;" class="close"></a>
+                        </div>
+                        <!-- 内容区 -->
+                        <div class="cnt">
+                            <p>您已领过券！</p>
+                            <p>不要太贪心哦~！</p>
+                        </div>
+                        <!-- 脚部 -->
+                        <div class="footer">
+                            <!-- 不可点击加类“disabled” -->
+                            <a href="javascript:;" class="btn">去首页购物</a>
+                        </div>
+                    </div>
+                    <div class="pop-con pop-con-4">
+                        <!-- 头部 -->
+                        <div class="title">
+                            <a href="javascript:;" class="close"></a>
+                        </div>
+                        <!-- 内容区 -->
+                        <div class="cnt">
+                            <p>
+                                <em class="success-text">很遗憾</em>
+                            </p>
+                            <p>此优惠券仅限移动端</p>
+                            <p>首次登陆用户领取!</p>
+                        </div>
+                        <!-- 脚部 -->
+                        <div class="footer">
+                            <!-- 不可点击加类“disabled” -->
+                            <a href="javascript:;" class="btn">去首页购物</a>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="right-side col-md-3">
+
+                <form class="guize tpl hidden">
+                  <div class="form-group">
+                    <label for="title-color" class="col-sm-2 control-label lang-label">活动规则背景颜色</label>
+                    <input type="color" class="form-control" id="title-color" ng-model="titleColor">
+                  </div>
+                  <div class="form-group">
+                    <label for="act-guize-color" class="col-sm-2 control-label lang-label">活动规则字体颜色</label>
+                    <input type="color" class="form-control" id="act-guize-color" ng-model="actGuizeColor">
+                  </div>
+                  <div class="form-group">
+                    <label for="act-font-color" class="col-sm-2 control-label lang-label">规则规则条款字体颜色</label>
+                    <input type="color" class="form-control" id="act-font-color" ng-model="actFontColor">
+                  </div>
+                  <div class="form-group">
+                    <label for="guize-content" class="col-sm-2 control-label">内容</label>
+                    <textarea class="form-control" id="guize-content" rows="25"  style="width:100%;" ng-model="guizeContent"></textarea>
+                  </div>
+                </form>
+
+                <div class="pop-window tpl hidden">
+                    
+                    <div class="form-group">
+                        <label for="popup-btn-color" class="col-sm-2 control-label">按钮背景颜色</label>
+                        <input type="color" class="form-control" id="popup-btn-color" ng-model="popupBtnColor">
+                    </div>
+                    <div class="form-group">
+                        <label for="popup-btn-font-color" class="col-sm-2 control-label">按钮字体颜色</label>
+                        <input type="color" class="form-control" id="popup-btn-font-color" ng-model="popupBtnFontColor">
+                    </div>
+                    <button class="but1" value="pop-con-1">弹出框1</button>
+                    <div class="pop1-modify-input">
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-1 .success-text">
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-1 p:eq(1) .nocss">                        
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-1 .coupon-num" >
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-1 .footer a:first" >
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-1 .footer a:last" >
+                    </div>                    
+                    <button class="but1" value="pop-con-2">弹出框2</button>
+                    <div class="pop2-modify-input">
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-2 .success-text" >
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-2 .cnt p:last" >
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-2 .footer a:first">
+                    </div>
+                    <button class="but1" value="pop-con-3">弹出框3</button>
+                    <div class="pop3-modify-input">                        
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-3 .cnt p:first" >
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-3 .cnt p:last" >
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-3 .footer a:first" >
+                    </div>
+                    <button class="but1" value="pop-con-4">弹出框4</button>
+                    <div class="pop4-modify-input">
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-4 .success-text" >
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-4 .cnt p:eq(1)" >
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-4 .cnt p:last" >
+                        <input type="text" class="form-control poptxt" data-elemclass=".pop-con-4 .footer a:first" >
+                    </div>
+                </div>
+
+                <div class="uploader tpl hidden">                    
+                </div>
+
+                <div class="defaultSetting tpl">
+                    
+                    <div class="form-group">
+                        <form action="" name="import_new_prj" id="import_new_prj">
+                            <label for="app-name" class="col-sm-2 control-label create">导入新项目</label>   
+                            <input type="file" name="newFile" id="newFile" class="new-file" multiple>   
+                        </form>                        
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label reset">重置为原始状态</label>                         
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="app-name" class="col-sm-2 control-label">应用名称</label>
+                        <input type="text" class="form-control" id="appName" value="唯品会">
+                    </div>
+                    <div class="form-group">
+                        <label for="background-color" class="col-sm-2 control-label">整体背景颜色</label>
+                        <input type="color" class="form-control" id='background-color' ng-model="backgroundColor" >
+                    </div>
+                    <div class="form-group spe-f-g">
+                        <label class="col-sm-2 control-label abs-l">规则箭头</label>
+                        <img src="resources/images/arrow.png" width="32" data-imgtype="arrow" >
+                        <div class="abs-img" ></div>
+                    </div>
+                    <div class="form-group spe-f-g">
+                        <label class="col-sm-2 control-label lang-label abs-l" style="width: 100px;">弹出窗口关闭按钮</label>
+                        <img src="resources/images/close.png" width="32" data-imgtype="close">                       
+                        <div class="abs-img" ></div>
+                    </div>
+                    <div class="form-group spe-f-g">
+                        <label class="col-sm-2 control-label abs-l">已领取图标</label>
+                        <img src="resources/images/coupon_off.png" width="250" data-imgtype="coupon_off">
+                        <div class="abs-img" ></div>
+                    </div>
+                    <div class="form-group spe-f-g sspe">
+                        <label class="col-sm-2 control-label abs-l">未领取图标</label>
+                        <img src="resources/images/coupon_on.png" width="250" data-imgtype="coupon_on">
+                        <div class="abs-img" ></div>
+                    </div>
+                    <div class="uploaderIconContainer">
+                    </div>
+
+                    <div class="but-create-div">
+                        <button id="create" type="button">生 成</button>
+                    </div>
+                    <div id="result">
+                        <div class="result-mark"><img id="result-mark-img"></div>
+                        <div id="result-report"></div>
+                        <a id="result-download"></a>
+                        <div class="cl"></div>
+                        <a id="result-url" target="_blank">浏览器打开链接</a> 
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script id="img-reset-tpl" type="text/template">
+        <div id="fileList" class="uploader-list"></div>
+        <div id="filePicker">选择图片</div>
+    </script>
+    <script type="text/javascript" src="javascripts/jquery-1.11.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="diyUpload/js/webuploader.html5only.min.js"></script>
+    <script type="text/javascript" src="javascripts/angular.js"></script>
+    <script type="text/javascript" src="javascripts/index.js"></script>
+
+    <script src="javascripts/jquery.ui.widget.js"></script>
+    <script src="javascripts/jquery.iframe-transport.js"></script>
+    <script src="javascripts/jquery.fileupload.js"></script>
+
+
+
+</body>
+</html>

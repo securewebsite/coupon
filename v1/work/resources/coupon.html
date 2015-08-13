@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<title>{APP_NAME}</title>
+<script src="http://mzt.vip.com/cmstopic/app/design/js/lib/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="resources/css/style.css" />
+</head>
+
+<body style="background-color:{BODY_BACKGROUND_COLOR}">
+
+{COUPON_USERSET_CONTENT}
+
+<script type="text/javascript" charset="utf-8">
+    $(function(){
+        // 设置根字体大小
+        var win = $(window);
+        setRootFontSize = function(){
+          var ww = win.width();
+          var root;
+
+          if(ww<320)                  root=50;
+          else if(320<=ww && ww<640)  root=ww*100/640;
+          else if(640<=ww)            root=100;
+
+          $("html").css("font-size", root+"px");
+        }
+        win.resize(setRootFontSize).load(setRootFontSize).resize();
+
+        //规则打开
+        $(".rule .title").click(function(){$(".rule").toggleClass("on")});
+    });
+</script>
+</body>
+</html>
